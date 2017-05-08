@@ -25,6 +25,8 @@ public class Tregeo extends AppCompatActivity {
 
     }
 
+    //process click key
+    //обработка нажатия клавиш
     public void geoClick(View v){
         Intent intent=new Intent();
         switch (v.getId()){

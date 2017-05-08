@@ -176,6 +176,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //del 0
+    //удаление 0
     private double getDouble(Object value) {
         double result = 0;
         try {
@@ -187,7 +189,8 @@ public class MainActivity extends AppCompatActivity {
 
         return result;
     }
-
+    //выгразка/загрузка в сторе неоходимых данных
+    //push is store data
     private void doCalc() {
 
         OperationType operTypeTmp = (OperationType) commands.get(Store.OPERATION);
@@ -198,7 +201,8 @@ public class MainActivity extends AppCompatActivity {
                     getDouble(commands.get(Store.F)),
                     getDouble(commands.get(Store.S)));
         }catch (DivZero e){
-            Toast.makeText(this, R.string.divZero, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, R.string.divZero, Toast.LENGTH_SHORT).show();
+            txtResult.setText(R.string.divZero) ;
             return;
         }
         if (result % 1 == 0){
@@ -210,7 +214,8 @@ public class MainActivity extends AppCompatActivity {
         commands.put(Store.F, result);
 
     }
-
+    //просчет по зданым параметрам и тупу операции
+    //count by parameters and operation
     private Double calc(OperationType operType, double a, double b) {
         Operation operation=new Operation();
         switch (operType) {
