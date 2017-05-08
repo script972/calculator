@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -191,13 +192,15 @@ public class MainActivity extends AppCompatActivity {
 
         OperationType operTypeTmp = (OperationType) commands.get(Store.OPERATION);
 
-        // 2 + 1 +
-
-        double result = calc(operTypeTmp,
-                getDouble(commands.get(Store.F)),
-                getDouble(commands.get(Store.S)));
-
-
+        double result=0;
+        try {
+             result = calc(operTypeTmp,
+                    getDouble(commands.get(Store.F)),
+                    getDouble(commands.get(Store.S)));
+        }catch (DivZero e){
+            Toast.makeText(this, R.string.divZero, Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (result % 1 == 0){
             txtResult.setText(String.valueOf((int)result));
         }else{

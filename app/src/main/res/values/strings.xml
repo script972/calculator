@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">"calculator "</string>
     <string name="title_activity_tregeo">Tregeo</string>
+    <string name="divZero">Error</string>
 </resources>

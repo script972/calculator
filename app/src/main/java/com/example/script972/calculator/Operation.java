@@ -14,6 +14,9 @@ public class Operation {
     }
 
     public double dived(double a, double b) {
+        if(b==0){
+            throw new DivZero();
+        }
         return a/b;
     }
 
