@@ -51,6 +51,7 @@
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="Del"
             android:onClick="buttonClick"
+            android:background="@drawable/man_butt_scen"
             android:text="&lt;-" />
 
 
@@ -65,6 +66,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="C"
+            android:background="@drawable/man_butt_scen"
             android:onClick="buttonClick"
             android:text="AC" />
 
@@ -77,7 +79,11 @@
             android:layout_weight="1"
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="Geom"
+
             android:onClick="buttonClick"
+            android:background="@drawable/man_butt_scen"
+
+
             android:text="Geom" />
 
 
@@ -101,6 +107,8 @@
             android:text="7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/button_scen"
+
             android:layout_weight="1"/>
 
         <Button
@@ -112,6 +120,8 @@
             android:contentDescription="8"
             android:onClick="buttonClick"
             android:text="8"
+            android:background="@drawable/button_scen"
+
 
             android:layout_weight="1"/>
 
@@ -122,6 +132,8 @@
             android:contentDescription="9"
             android:onClick="buttonClick"
             android:text="9"
+            android:background="@drawable/button_scen"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
@@ -135,6 +147,9 @@
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="/"
             android:onClick="buttonClick"
+            android:background="@drawable/man_butt_scen"
+
+
             android:text="/" />
 
     </LinearLayout>
@@ -157,6 +172,8 @@
             android:layout_row="1"
             android:contentDescription="4"
             android:onClick="buttonClick"
+            android:background="@drawable/button_scen"
+
             android:text="4" />
 
 
@@ -169,6 +186,8 @@
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="5"
             android:onClick="buttonClick"
+            android:background="@drawable/button_scen"
+
             android:text="5" />
 
         <Button
@@ -180,12 +199,15 @@
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="6"
             android:onClick="buttonClick"
+            android:background="@drawable/button_scen"
+
             android:text="6" />
 
         <Button
             android:id="@+id/btnMultiply"
             style="?android:attr/buttonStyleSmall"
             android:layout_weight="1"
+            android:background="@drawable/man_butt_scen"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center_vertical"
@@ -214,6 +236,8 @@
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="1"
             android:onClick="buttonClick"
+            android:background="@drawable/button_scen"
+
             android:text="1" />
 
         <Button
@@ -224,6 +248,8 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="2"
+            android:background="@drawable/button_scen"
+
             android:onClick="buttonClick"
             android:text="2" />
 
@@ -236,6 +262,8 @@
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="3"
             android:onClick="buttonClick"
+            android:background="@drawable/button_scen"
+
             android:text="3" />
 
         <Button
@@ -247,6 +275,9 @@
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="-"
             android:onClick="buttonClick"
+            android:background="@drawable/man_butt_scen"
+
+
             android:text="-" />
 
 
@@ -264,57 +295,58 @@
             android:id="@+id/btnZero"
             style="?android:attr/buttonStyleSmall"
             android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_scen"
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="0"
             android:onClick="buttonClick"
+
             android:text="0" />
 
         <Button
             android:id="@+id/btnComma"
             style="?android:attr/buttonStyleSmall"
             android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_scen"
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription=","
             android:onClick="buttonClick"
-            android:text="," />
+
+            android:text="." />
+        <Button
+            android:id="@+id/btnResult"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/button_scen"
+            android:gravity="center_horizontal|center_vertical"
+            android:contentDescription="="
+            android:onClick="buttonClick"
+
+            android:text="=" />
 
         <Button
             android:id="@+id/btnAdd"
             style="?android:attr/buttonStyleSmall"
             android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/man_butt_scen"
+
             android:gravity="center_horizontal|center_vertical"
             android:contentDescription="+"
+
             android:onClick="buttonClick"
             android:text="+" />
 
     </LinearLayout>
 
 
-    <!--6-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnResult"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:gravity="center_horizontal|center_vertical"
-        android:contentDescription="="
-        android:onClick="buttonClick"
-        android:text="=" />
-
-    </LinearLayout>
 
 
 </LinearLayout>

@@ -1,33 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.script972.calculator.Tregeo">
+    android:layout_height="wrap_content">
 
-    <android.support.design.widget.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <EditText
+            android:id="@+id/geoResult"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:cursorVisible="false"
+            android:ems="25"
+            android:textSize="35dp"
+            android:textColor="@color/colorAccent"
+            android:background="@color/colorPrimary"
+            android:enabled="true"
+            android:focusable="false"
+            android:inputType="numberDecimal"
+            android:text="0" >
+            <requestFocus/>
+        </EditText>
 
-    </android.support.design.widget.AppBarLayout>
+    </LinearLayout>
 
-    <include layout="@layout/content_tregeo" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-</android.support.design.widget.CoordinatorLayout>
+        <Button
+            android:id="@+id/sin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="sin"
+            android:onClick="geoClick"
+            android:background="@drawable/man_butt_scen"/>
+        <Button
+            android:id="@+id/cos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="cos"
+            android:onClick="geoClick"
+            android:background="@drawable/man_butt_scen"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="tag"
+            android:onClick="geoClick"
+            android:background="@drawable/man_butt_scen"/>
+        <Button
+            android:id="@+id/ctag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ctag"
+            android:onClick="geoClick"
+            android:background="@drawable/man_butt_scen"/>
+    </LinearLayout>
+
+</LinearLayout>
+

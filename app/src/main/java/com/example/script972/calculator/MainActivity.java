@@ -5,6 +5,7 @@ import java.util.EnumMap;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import com.example.script972.calculator.Operation;
 import com.example.script972.calculator.R;
 import com.example.script972.calculator.Store;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     //component activity
     //компоненты активити
@@ -66,7 +67,7 @@ public class MainActivity extends Activity {
         if(data==null){
             return;
         }
-        String rrr=data.getStringExtra("rrr");
+        String rrr=data.getStringExtra("value");
         txtResult.setText(rrr);
     }
 
@@ -101,6 +102,7 @@ public class MainActivity extends Activity {
 
             case R.id.btnGeom:{//call  second activity
                 Intent intent=new Intent(this, Tregeo.class);
+                intent.putExtra("value",txtResult.getText().toString());
                 startActivityForResult(intent,1);
 
                 break;
@@ -114,12 +116,12 @@ public class MainActivity extends Activity {
 
             case R.id.btnResult: {// получаем результат
 
-                if (commands.containsKey(Store.F) && commands.containsKey(Store.OPERATION)) {// ���� ����� �����, ������ ���� �������� � ����� ������ �����
+                if (commands.containsKey(Store.F) && commands.containsKey(Store.OPERATION)) {
                     commands.put(Store.S, txtResult.getText());
 
                     doCalc(); //просчет результат
 
-                    commands.put(Store.OPERATION, operType);// �������� ��� �������� ��� ������������ ��������
+                    commands.put(Store.OPERATION, operType);
                     commands.remove(Store.S);
                 }
 
